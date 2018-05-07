@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<GEDCOM>
+	<INDI id="@I1@">
+		<NAME value="Jamis Gordon /Buck/">
+			<SURN>Buck</SURN>
+			<GIVN>Jamis Gordon</GIVN>
+		</NAME>
+		<SEX>M</SEX>
+	</INDI>
+</GEDCOM>
