@@ -20,6 +20,7 @@ GEDCOM -> XML Parser/Convertor
 2. Type `python cli.py`
 3. Enter the path to GEDCOM `.ged` file to parse. Like this, `folder/input.ged`
 4. Enter the path to XML `.xml` file to save xml. Like this, `folder/output.xml`
+> Use `.ged` files from `data_files` directory for testing.
 
 # Meta
 ---
