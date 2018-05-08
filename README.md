@@ -22,5 +22,52 @@ GEDCOM -> XML Parser/Convertor
 4. Enter the path to XML `.xml` file to save xml. Like this, `folder/output.xml`
 > Use `.ged` files from `data_files` directory for testing.
 
+# How to use it on your own
+
+* Copy `gedcom_xml_parser` directory in to the directory where your python file is.
+* Below is the code example of usage,
+``` python
+from gedcom_xml_parser.gedcom_xml_parser import GedcomXMLParser
+
+def main():
+    '''GedcomXMLParser usage'''
+    gedcom_text = r'''0 @I1@ INDI
+    1 NAME Jamis Gordon /Buck/
+    2 SURN Buck
+    2 GIVN Jamis Gordon
+    1 SEX M'''
+
+    parser = GedcomXMLParser(gedcom_text)
+    xml_text_pretty = parser.get_parsed_data()
+    xml_text_minified = parser.get_parsed_data_minified()
+    
+    print('# --- Parsed XML (Pretty):')
+    print(xml_text_pretty)
+    # --- OUTPUT:
+    # <?xml version="1.0" ?>
+    # <GEDCOM>
+    #         <INDI id="@I1@">
+    #                 <NAME value="Jamis Gordon /Buck/">
+    #                         <SURN>Buck</SURN>
+    #                         <GIVN>Jamis Gordon</GIVN>
+    #                 </NAME>
+    #                 <SEX>M</SEX>
+    #         </INDI>
+    # </GEDCOM>
+    
+    print()
+    print('# --- Parsed XML (Minified):')
+    print(xml_text_minified)
+    # --- OUTPUT:
+    # <?xml version="1.0" ?><GEDCOM><INDI id="@I1@"><NAME ...
+
+if __name__ == '__main__':
+    main()
+```
+
+
 # Meta
+
+* TODO: Create an executable.
+
 ---
