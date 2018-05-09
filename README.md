@@ -65,9 +65,12 @@ if __name__ == '__main__':
     main()
 ```
 
+# Build Executable
 
-# Meta
-
-* TODO: Create an executable.
+1. You will need to have `cx_freeze` installed first
+2. Build only tested on `Windows`
+3. Replace `<path/to/your/python_directory>` in `setup.py` with your own python directory path.
+4. Open Terminal/Cmd
+5. Run `python setup.py build` to build the executable.
 
 ---

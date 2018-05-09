@@ -1,6 +1,5 @@
-# from gui_files import gedcom_parser
-# from gui_files import gedcom_parser_support
-# from gui_files import *
+"""gui init file"""
+
 import sys
 sys.path.append('./gui_files/')
 from gui_files import gedcom_parser
